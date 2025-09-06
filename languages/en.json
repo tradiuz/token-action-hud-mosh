@@ -1,6 +1,6 @@
 {
   "tokenActionHud": {
-    "template": {
+    "mosh": {
       "armor": "Armor",
       "containers": "Containers",
       "consumables": "Consumables",

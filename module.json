@@ -1,6 +1,6 @@
 {
-  "id": "token-action-hud-template",
-  "title": "Token Action HUD Template",
+  "id": "token-action-hud-mosh",
+  "title": "Token Action HUD mosh",
   "description": "Token Action HUD is a repositionable HUD of actions for a selected token",
   "authors": [
     {
@@ -21,7 +21,7 @@
   "scripts": [
   ],
   "styles": [
-    "./styles/tah-template-style.css"
+    "./styles/tah-mosh-style.css"
   ],
   "languages": [
     {
@@ -34,12 +34,12 @@
   "relationships": {
     "systems": [
       {
-        "id": "template",
+        "id": "mosh",
         "type": "system",
         "compatibility": [
           {
-            "minimum": "1.0.0",
-            "verified": "1.0.0"
+            "minimum": "0.6.0",
+            "verified": "0.6.0"
           }
         ]
       }
@@ -50,9 +50,9 @@
         "type": "module",
         "compatibility": [
           {
-            "minimum": "1.5.0",
-            "maximum": "1.5",
-            "verified": "1.5.0"
+            "minimum": "2.0",
+            "maximum": "2.0.16",
+            "verified": "2.0.16"
           }
         ]
       }
@@ -65,7 +65,7 @@
   "socket": false,
   "manifest": "This is auto replaced",
   "download": "This is auto replaced",
-  "readme": "https://github.com/Larkinabout/fvtt-token-action-hud-template#readme",
+  "readme": "https://github.com/tradiuz/token-action-hud-mosh#readme",
   "protected": false,
   "coreTranslation": false,
   "library": false

@@ -2,7 +2,7 @@
  * Module-based constants
  */
 export const MODULE = {
-    ID: 'token-action-hud-template'
+    ID: 'token-action-hud-mosh'
 }
 
 /**
@@ -21,7 +21,7 @@ export const REQUIRED_CORE_MODULE_VERSION = '1.5'
  * Action types
  */
 export const ACTION_TYPE = {
-    item: 'tokenActionHud.template.item',
+    item: 'tokenActionHud.mosh.item',
     utility: 'tokenActionHud.utility'
 }
 
@@ -29,12 +29,12 @@ export const ACTION_TYPE = {
  * Groups
  */
 export const GROUP = {
-    armor: { id: 'armor', name: 'tokenActionHud.template.armor', type: 'system' },
-    equipment: { id: 'equipment', name: 'tokenActionHud.template.equipment', type: 'system' },
-    consumables: { id: 'consumables', name: 'tokenActionHud.template.consumables', type: 'system' },
-    containers: { id: 'containers', name: 'tokenActionHud.template.containers', type: 'system' },
-    treasure: { id: 'treasure', name: 'tokenActionHud.template.treasure', type: 'system' },
-    weapons: { id: 'weapons', name: 'tokenActionHud.template.weapons', type: 'system' },
+    armor: { id: 'armor', name: 'tokenActionHud.mosh.armor', type: 'system' },
+    equipment: { id: 'equipment', name: 'tokenActionHud.mosh.equipment', type: 'system' },
+    consumables: { id: 'consumables', name: 'tokenActionHud.mosh.consumables', type: 'system' },
+    containers: { id: 'containers', name: 'tokenActionHud.mosh.containers', type: 'system' },
+    treasure: { id: 'treasure', name: 'tokenActionHud.mosh.treasure', type: 'system' },
+    weapons: { id: 'weapons', name: 'tokenActionHud.mosh.weapons', type: 'system' },
     combat: { id: 'combat', name: 'tokenActionHud.combat', type: 'system' },
     token: { id: 'token', name: 'tokenActionHud.token', type: 'system' },
     utility: { id: 'utility', name: 'tokenActionHud.utility', type: 'system' }
