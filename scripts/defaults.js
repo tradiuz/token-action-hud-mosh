@@ -17,24 +17,19 @@ Hooks.once('tokenActionHudCoreApiReady', async (coreModule) => {
             {
                 nestId: 'inventory',
                 id: 'inventory',
-                name: coreModule.api.Utils.i18n('Mosh.Inventory'),
+                name: coreModule.api.Utils.i18n('tokenActionHud.mosh.inventory'),
                 groups: [
-                    { ...groups.weapons, nestId: 'inventory_weapons' },
-                    { ...groups.armor, nestId: 'inventory_armor' },
-                    { ...groups.equipment, nestId: 'inventory_equipment' },
-                    { ...groups.consumables, nestId: 'inventory_consumables' },
-                    { ...groups.containers, nestId: 'inventory_containers' },
-                    { ...groups.treasure, nestId: 'inventory_treasure' }
+                    { ...groups.weapon, nestId: 'inventory_weapon' },
+                    { ...groups.item, nestId: 'inventory_item' },
                 ]
             },
             {
                 nestId: 'utility',
                 id: 'utility',
-                name: coreModule.api.Utils.i18n('tokenActionHud.utility'),
+                name: coreModule.api.Utils.i18n('tokenActionHud.mosh.utility'),
                 groups: [
-                    { ...groups.combat, nestId: 'utility_combat' },
-                    { ...groups.token, nestId: 'utility_token' },
-                    { ...groups.rests, nestId: 'utility_rests' },
+                    { ...groups.stat, nestId: 'utility_stat' },
+                    { ...groups.save, nestId: 'utility_save' },
                     { ...groups.utility, nestId: 'utility_utility' }
                 ]
             }

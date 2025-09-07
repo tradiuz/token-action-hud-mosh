@@ -6,9 +6,11 @@
       "consumables": "Consumables",
       "equipment": "Equipment",
       "inventory": "Inventory",
-      "item": "Item",
+      "utility": "Utility",
+      "stats": "Stats",
+      "saves" : "Saves",
+      "items": "Items",
       "weapons": "Weapons",
-      "treasure": "Treasure",
       "settings": {
         "displayUnequipped": {
           "hint": "Choose whether to display unequipped items on the HUD",
