@@ -1,12 +1,13 @@
-![Downloads](https://img.shields.io/github/downloads/Larkinabout/fvtt-token-action-hud-template/latest/module.zip?color=2b82fc&label=DOWNLOADS&style=for-the-badge) [![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Ftoken-action-hud-template&colorB=448d34&style=for-the-badge)](https://forge-vtt.com/bazaar#package=token-action-hud-template)
+![Downloads](https://img.shields.io/github/downloads/tradiuz/fvtt-token-action-hud-mosh/latest/module.zip?color=2b82fc&label=DOWNLOADS&style=for-the-badge)
 
-# Token Action HUD Template
+# Token Action HUD - Mothership
 
-Token Action HUD is a repositionable HUD of actions for a selected token.
+[Token Action HUD](https://foundryvtt.com/packages/token-action-hud-core) is a repositionable HUD of actions for a selected token.  This system module adds support for the [MoSh - Unofficial Mothership](https://foundryvtt.com/packages/mosh) system.
 
 ![Token Action HUD](.github/readme/token-action-hud.gif)
 
 # Features
+
 - Make rolls directly from the HUD instead of opening your character sheet.
 - Use items from the HUD or right-click an item to open its sheet.
 - Move the HUD and choose to expand the menus up or down.
@@ -16,15 +17,17 @@ Token Action HUD is a repositionable HUD of actions for a selected token.
 # Installation
 
 ## Method 1
+
 1. On Foundry VTT's **Configuration and Setup** screen, go to **Add-on Modules**
 2. Click **Install Module**
-3. Search for **Token Action HUD Pathfinder 2** 
+3. Search for **Token Action HUD Mothership**
 4. Click **Install** next to the module listing
 
 ## Method 2
+
 1. On Foundry VTT's **Configuration and Setup** screen, go to **Add-on Modules**
 2. Click **Install Module**
-3. In the Manifest URL field, paste: `https://github.com/Larkinabout/fvtt-token-action-hud-template/releases/latest/download/module.json`
+3. In the Manifest URL field, paste: `https://github.com/tradiuz/fvtt-token-action-hud-mosh/releases/latest/download/module.json`
 4. Click **Install** next to the pasted Manifest URL
 
 ## Required Modules
@@ -32,13 +35,14 @@ Token Action HUD is a repositionable HUD of actions for a selected token.
 **IMPORTANT** - Token Action HUD Template requires the [Token Action HUD Core](https://foundryvtt.com/packages/token-action-hud-core) module to be installed.
 
 ## Recommended Modules
+
 Token Action HUD uses the [Color Picker](https://foundryvtt.com/packages/color-picker) library module for its color picker settings.
 
 # Support
 
 For a guide on using Token Action HUD, go to: [How to Use Token Action HUD](https://github.com/Larkinabout/fvtt-token-action-hud-core/wiki/How-to-Use-Token-Action-HUD)
 
-For questions, feature requests or bug reports, please open an issue [here](https://github.com/Larkinabout/fvtt-token-action-hud-core/issues).
+For questions, feature requests or bug reports, please [open an issue](https://github.com/tradiuz/fvtt-token-action-hud-mosh/issues) for Token Action Hud Mothership related issues or [open an issue](https://github.com/Larkinabout/fvtt-token-action-hud-core/issues) for Token Action Hud Core issues.
 
 Pull requests are welcome. Please include a reason for the request or create an issue before starting one.
 
