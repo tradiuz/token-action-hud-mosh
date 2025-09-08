@@ -8,9 +8,9 @@
       "url": "https://github.com/tradiuz"
     }
   ],
-  "url": "https://github.com/tradiuz/token-action-hud-mosh",
+  "url": "#{project_url}#",
   "flags": {},
-  "version": "1.0.0",
+  "version": "#{VERSION}#",
   "compatibility": {
     "minimum": "13",
     "verified": "13.348"
@@ -68,9 +68,9 @@
     }
   },
   "socket": false,
-  "manifest": "This is auto replaced",
-  "download": "This is auto replaced",
-  "readme": "https://github.com/tradiuz/token-action-hud-mosh#readme",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#",
+  "readme": "#{project_url}##readme",
   "protected": false,
   "coreTranslation": false,
   "library": false
