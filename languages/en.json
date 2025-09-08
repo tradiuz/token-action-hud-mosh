@@ -7,8 +7,10 @@
       "equipment": "Equipment",
       "inventory": "Inventory",
       "utility": "Utility",
+      "attributes": "Attributes",
       "stats": "Stats",
-      "saves" : "Saves",
+      "skills": "Skills",
+      "saves": "Saves",
       "items": "Items",
       "weapons": "Weapons",
       "settings": {

@@ -53,7 +53,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
      * @param {object} event        The event
      * @param {string} encodedValue The encoded value
      */
-    async handleActionHover(event, encodedValue) {}
+    async handleActionHover(event, encodedValue) { }
 
     /**
      * Handle group click
@@ -62,7 +62,7 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
      * @param {object} event The event
      * @param {object} group The group
      */
-    async handleGroupClick(event, group) {}
+    async handleGroupClick(event, group) { }
 
     /**
      * Handle action
@@ -74,8 +74,10 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
      * @param {string} actionId     The actionId
      */
     async #handleAction(event, actor, token, actionTypeId, actionId) {
-      console.log("actionTypeId: ", actionTypeId)
       switch (actionTypeId) {
+        case "statsAndSaves":
+          this.#handleStatAction(actor, actionId);
+          break;
         case "item":
           this.#handleItemAction(event, actor, actionId);
           break;
@@ -85,6 +87,16 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
       }
     }
 
+
+    /**
+     * Handle stat action
+     * @privat2e
+     * @param {object} actor    The actor
+     * @param {string} actionId The action id
+     */
+    #handleStatAction(actor, actionId) {
+      actor.rollCheck(null, 'low', actionId, null, null, null);
+    }
     /**
      * Handle item action
      * @privat2e
@@ -95,8 +107,18 @@ Hooks.once("tokenActionHudCoreApiReady", async (coreModule) => {
     #handleItemAction(event, actor, actionId) {
       //const item = actor.items.get(actionId)
       let item = foundry.utils.duplicate(actor.items.get(actionId));
-      this.actor.rollCheck(null, "low", "combat", null, null, item);
-      //item.toChat(event)
+      switch (item.type) {
+        case "skill":
+          this.actor.rollCheck(null, null, null, item.name, item.system.bonus, null);
+          break;
+        case "weapon":
+          this.actor.rollCheck(null, "low", "combat", null, null, item);
+          break;
+        default:
+          this.actor.printDescription(item._id, { event: event });
+          break;
+      }
+
     }
 
     /**

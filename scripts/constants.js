@@ -21,10 +21,8 @@ export const REQUIRED_CORE_MODULE_VERSION = '2.0'
  * Action types
  */
 export const ACTION_TYPE = {
-    item: 'tokenActionHud.mosh.items',
-    stat: 'tokenActionHud.mosh.stats',
-    saves: 'tokenActionHud.mosh.saves',
-    weapon: 'tokenActionHud.mosh.weapons',
+    item: 'tokenActionHud.mosh.item',
+    statsAndSaves: 'Mosh.StatsAndSaves',
     utility: 'tokenActionHud.utility'
 }
 
@@ -32,21 +30,26 @@ export const ACTION_TYPE = {
  * Groups
  */
 export const GROUP = {
-    skill: { id: 'skill', name: 'tokenActionHud.mosh.skill', type: 'system'},
-    weapon: { id: 'weapon', name: 'tokenActionHud.mosh.weapons', type: 'system'},
-    item: { id: 'item', name: 'tokenActionHud.mosh.items', type: 'system'},
-    stat: { id: 'stat', name: 'tokenActionHud.mosh.stats', type: 'system'},
-    save: {  id: 'save', name: 'tokenActionHud.mosh.saves', type: 'system'},
-    utility:  { id: 'utility', name: 'tokenActionHud.utility', type: 'system' }
+    skill: { id: 'skill', name: 'Mosh.Skills', type: 'system' },
+    weapon: { id: 'weapon', name: 'Mosh.Weapons', type: 'system' },
+    armor: { id: 'armor', name: "Mosh.Armor", type: 'system' },
+    item: { id: 'item', name: 'Mosh.Items', type: 'system' },
+    condition: { id: 'condition', name: 'Mosh.Condition', type: 'system' },
+    attribute: { id: 'attribute', name: 'tokenActionHud.mosh.attributes', type: 'system' },
+    ability: { id: 'ability', name: 'Mosh.SpecialAbilities', type: 'system' },
+    statsAndSaves: { id: 'statsAndSaves', name: 'Mosh.StatsAndSaves', type: 'system' },
+    utility: { id: 'utility', name: 'tokenActionHud.utility', type: 'core' }
 }
 
 /**
  * Item types
  */
 export const ITEM_TYPE = {
-    skill: {groupId: 'skill'},
-    weapon: { groupId: 'weapon'},
-    item: { groupId: 'item'},
-    stat: { groupId: 'stat'},
-    save: {  groupId: 'save'},
+    condition: { groupId: 'condition' },
+    skill: { groupId: 'skill' },
+    armor: { groupId: 'armor' },
+    weapon: { groupId: 'weapon' },
+    item: { groupId: 'item' },
+    ability: { groupId: 'ability' },
+
 }

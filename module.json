@@ -1,16 +1,16 @@
 {
   "id": "token-action-hud-mosh",
-  "title": "Token Action HUD mosh",
+  "title": "Token Action HUD Mothership",
   "description": "Token Action HUD is a repositionable HUD of actions for a selected token",
   "authors": [
     {
-      "name": "Larkinabout",
-      "url": "https://github.com/Larkinabout"
+      "name": "tradiuz",
+      "url": "https://github.com/tradiuz"
     }
   ],
-  "url": "This is auto replaced",
+  "url": "https://github.com/tradiuz/token-action-hud-mosh",
   "flags": {},
-  "version": "This is auto replaced",
+  "version": "1.0.0",
   "compatibility": {
     "minimum": "13",
     "verified": "13.348"
@@ -48,6 +48,16 @@
             "minimum": "2.0",
             "maximum": "2.0.16",
             "verified": "2.0.16"
+          }
+        ]
+      },
+      {
+        "id": "color-picker",
+        "type": "module",
+        "compatibility": [
+          {
+            "minimum": "1.7",
+            "verified": "1.7"
           }
         ]
       }

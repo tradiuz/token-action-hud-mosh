@@ -15,7 +15,7 @@ Hooks.once('tokenActionHudCoreApiReady', async (coreModule) => {
          * @override
          * @param {array} groupIds
          */a
-        async buildSystemActions (groupIds) {
+        async buildSystemActions(groupIds) {
             // Set actor and token variables
             this.actors = (!this.actor) ? this._getActors() : [this.actor]
             this.actorType = this.actor?.type
@@ -30,7 +30,7 @@ Hooks.once('tokenActionHudCoreApiReady', async (coreModule) => {
                 this.items = items
             }
 
-            if (this.actorType === 'character') {
+            if (this.actorType === 'character' || this.actorType === 'creature') {
                 this.#buildCharacterActions()
             } else if (!this.actor) {
                 this.#buildMultipleTokenActions()
@@ -41,8 +41,9 @@ Hooks.once('tokenActionHudCoreApiReady', async (coreModule) => {
          * Build character actions
          * @private
          */
-        #buildCharacterActions () {
-            this.#buildInventory()
+        #buildCharacterActions() {
+            this.#buildStatsAndSaves('statsAndSaves', 'statsAndSaves');
+            this.#buildInventory();
         }
 
         /**
@@ -50,14 +51,42 @@ Hooks.once('tokenActionHudCoreApiReady', async (coreModule) => {
          * @private
          * @returns {object}
          */
-        #buildMultipleTokenActions () {
+        #buildMultipleTokenActions() {
         }
+        /**
+         * Build Stats and Saves
+         * @private
+         */
+        async #buildStatsAndSaves(actionType, groupId) {
+            let actions = []
+            const stats = this.actor.system.stats
+            const groupData = { id: groupId, type: 'system' };
 
+            actions = Object.keys(stats).forEach(stat => {
+                const id = `${actionType}-${stat}`
+                const name = stats[stat].label
+                const encodedValue = [actionType, stat].join(this.delimiter)
+                const info2 = { text: stats[stat].value + (stats[stat].mod || 0) }
+                const tooltip = { content: stats[stat].rollLabel }
+                const img = '/systems/mosh/images/icons/ui/attributes/' + stat.toLocaleLowerCase() + '.png'
+
+                this.addActions([{
+                    id,
+                    name,
+                    encodedValue,
+                    info2,
+                    tooltip,
+                    img
+                }], groupData);
+
+            });
+            ``
+        }
         /**
          * Build inventory
          * @private
          */
-        async #buildInventory () {
+        async #buildInventory() {
             if (this.items.size === 0) return
 
             const actionTypeId = 'item'
@@ -88,10 +117,13 @@ Hooks.once('tokenActionHudCoreApiReady', async (coreModule) => {
                     const actionTypeName = coreModule.api.Utils.i18n(ACTION_TYPE[actionTypeId])
                     const listName = `${actionTypeName ? `${actionTypeName}: ` : ''}${name}`
                     const encodedValue = [actionTypeId, id].join(this.delimiter)
-
+                    const tooltip = { content: itemData.system.description };
+                    const img = itemData.img;
                     return {
                         id,
                         name,
+                        tooltip,
+                        img,
                         listName,
                         encodedValue
                     }
